@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "757658133018",
+    "project_id": "audiostuido",
+    "storage_bucket": "audiostuido.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:757658133018:android:68b16c14dc6aaabab667a3",
+        "android_client_info": {
+          "package_name": "com.example.audio_studio"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyApr9ux7WLSkcN7n0qFfo6YeOMbCZtzeaM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
