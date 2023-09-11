@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:proyecto_musica/models/ecualizer_model.dart';
 import 'package:proyecto_musica/models/playlist_model.dart';
 import 'package:proyecto_musica/models/song_model.dart';
+import 'package:proyecto_musica/models/soundrecording_model.dart';
+import 'package:proyecto_musica/screens/ecualizar_screen.dart';
+import 'package:proyecto_musica/screens/recording_screen.dart';
 
 import '../widgets/widgets.dart';
 
@@ -132,6 +136,10 @@ class _DiscoverMusic extends StatelessWidget {
                 .copyWith(fontWeight: FontWeight.bold, color: Colors.white),
           ),
           const SizedBox(height: 20),
+
+          
+
+
           TextFormField(
             decoration: InputDecoration(
               isDense: true,
@@ -148,7 +156,40 @@ class _DiscoverMusic extends StatelessWidget {
                 borderSide: BorderSide.none,
               ),
             ),
-          )
+          ),
+            SizedBox(height: 15,),
+            Row(
+              children: [
+                IconButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => SoundRecordingPage(
+                        recordingModel: SoundRecordingModel(),
+                      ),
+                    ),
+                  );
+                },
+                icon: Icon(Icons.mic, color: Colors.white),
+                  tooltip: 'Grabacion',
+                ),
+                IconButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => SoundEqualizerPage(
+                    equalizerModel: SoundEqualizerModel(),
+                  ),
+                ),
+              );
+            },
+            icon: Icon(Icons.equalizer, color: Colors.white), 
+            tooltip: 'Ir a la Página de Ecualización de Sonido',
+          ),
+              ],
+            ),
         ],
       ),
     );
@@ -175,6 +216,7 @@ class _CustomNavBar extends StatelessWidget {
               icon: Icon(Icons.favorite_outline), label: 'Favorites'),
           BottomNavigationBarItem(
               icon: Icon(Icons.play_circle_outline), label: 'Play'),
+          
         ]);
   }
 }
@@ -201,6 +243,8 @@ class _CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       ],
     );
   }
+
+  
 
   @override
   Size get preferredSize => const Size.fromHeight(56.0);

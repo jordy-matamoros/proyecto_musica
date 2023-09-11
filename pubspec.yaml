@@ -39,6 +39,7 @@ dependencies:
   get: ^4.6.5
   just_audio: ^0.9.34
   rxdart: ^0.27.7
+  equalizer_flutter: ^0.0.1
 
 dev_dependencies:
   flutter_test:
